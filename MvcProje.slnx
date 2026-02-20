@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="not.txt" />
+  </Folder>
+  <Project Path="BusinessLayer/BusinessLayer.csproj" Id="31597437-c3aa-43ea-8ceb-a434707d874f" />
+  <Project Path="DataAccessLayer/DataAccessLayer.csproj" Id="dd86f322-2e69-430e-bb05-7a6994b18160" />
+  <Project Path="EntityLayer/EntityLayer.csproj" Id="ad1592b4-a047-4fa1-8a43-717bd72c7c44" />
+  <Project Path="MvcProje/MvcProje.csproj" Id="d1f0b42d-1f09-463d-b6f4-41af93acf346" />
+</Solution>
