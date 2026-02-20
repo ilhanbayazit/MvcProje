@@ -1,3 +1,7 @@
 <br />                = boşluk bırakır
 <h1-6>(metin)<h1-6>   = metin yazmanı sağlar 1 ile 6 arasında büyüklük 
 <p>(paragraf)<p>      = paragraf yazmaya yarar
+
+<tr>  = satır oluşturur
+<th>  = kalın puntoyla yazar(başlık)
+<td>  = normal puntoyla yazar(data)
