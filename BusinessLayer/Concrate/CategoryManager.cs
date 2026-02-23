@@ -19,6 +19,8 @@ namespace BusinessLayer.Concrate
         }
         public void CategoryAddBL(Category p)
         {
+           
+
             if (p.CategoryName == "" || p.CategoryName.Length <= 3 || p.CategoryDescription == "" || p.CategoryName.Length >= 51)
             {
                 // hata mesajı

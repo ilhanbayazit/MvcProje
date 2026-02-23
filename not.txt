@@ -5,3 +5,5 @@
 <tr>  = satır oluşturur
 <th>  = kalın puntoyla yazar(başlık)
 <td>  = normal puntoyla yazar(data)
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
