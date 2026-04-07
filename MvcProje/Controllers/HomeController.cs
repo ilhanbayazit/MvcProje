@@ -31,5 +31,10 @@ namespace MvcProje.Controllers
             ViewBag.Message = "ilk oyun = angry insects";
             return View();
         }
+        public ActionResult Modeller()
+        {
+            ViewBag.Message = "ilk oyun = angry insects";
+            return View();
+        }
     }
 }

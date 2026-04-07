@@ -11,12 +11,12 @@ namespace DataAccessLayer.Concrate
     public class Context : DbContext
     {
        
-        public DbSet<About> abouts { get; set; }
-        public DbSet<Category> categories { get; set; }
-        public DbSet<Contact> contacts { get; set; }
-        public DbSet<Content> contents { get; set; }
-        public DbSet<Heading> headings { get; set; }
-        public DbSet<Writer> writers { get; set; }
+        public DbSet<About> Abouts { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Content> Contents { get; set; }
+        public DbSet<Heading> Headings { get; set; }
+        public DbSet<Writer> Writers { get; set; }
 
     }
 }
