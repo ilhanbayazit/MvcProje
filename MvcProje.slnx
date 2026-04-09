@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/Solution Items/">
+    <File Path="kavram notları.txt" />
     <File Path="not.txt" />
   </Folder>
   <Project Path="BusinessLayer/BusinessLayer.csproj" Id="31597437-c3aa-43ea-8ceb-a434707d874f" />

@@ -1,4 +1,6 @@
 ﻿using BusinessLayer.Concrate;
+using BusinessLayer.ValidationRules;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrate;
 using Microsoft.Ajax.Utilities;
 using System;
@@ -6,27 +8,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using FluentValidation.Results;
+using System.CodeDom.Compiler;
 
 namespace MvcProje.Controllers
 {
     public class CategoryController : Controller
     {
         // GET: Category
-        CategoryManager cm = new CategoryManager();
+        CategoryManager cm = new CategoryManager(new EfCategoryDal());
+      
         public ActionResult Index()
         {
             return View();
         }
         public ActionResult GetCategoryList()
         {
-            //var categoryvalues = cm.GetAllBL();
-            return View();
+            var categoryvalues = cm.GetList();
+            return View(categoryvalues);
         }
-        //public ActionResult AddCategory(Category p)
-        //{
-        //    cm.CategoryAddBL(p);
-        //    return RedirectToAction("GetCategoryList");
-        //}
+       
         [HttpGet]
         public ActionResult AddCategory()
         {
@@ -35,8 +36,23 @@ namespace MvcProje.Controllers
         [HttpPost]
         public ActionResult AddCategory(Category p)
         {
-           // cm.CategoryAddBL(p);
-            return RedirectToAction("GetCategoryList");
+            // cm.CategoryAddBL(p);
+            CategoryValidator categoryValidator = new CategoryValidator();
+            ValidationResult result = categoryValidator.Validate(p);
+            if (result.IsValid)
+            {
+                cm.AddCategory(p);
+                return RedirectToAction("GetCategoryList");
+            }
+            else
+            {
+                foreach (var item in result.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                    
+                }
+            }
+            return View(p);
         }
 
     }

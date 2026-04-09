@@ -1,3 +1,9 @@
+
+ctrl k d = komut bloğu düzenleme
+
+
+
+
 <br />                = boşluk bırakır
 <h1-6>(metin)<h1-6>   = metin yazmanı sağlar 1 ile 6 arasında büyüklük 
 <p>(paragraf)<p>      = paragraf yazmaya yarar
@@ -7,3 +13,7 @@
 <td>  = normal puntoyla yazar(data)
 
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+
+
+

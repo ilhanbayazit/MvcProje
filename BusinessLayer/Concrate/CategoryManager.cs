@@ -20,6 +20,22 @@ namespace BusinessLayer.Concrate
             _categoryDal = categoryDal;
         }
 
+        public void AddCategory(Category category)
+        {
+
+            _categoryDal.insert(category);
+        }
+
+        public void DeleteCategory(Category category)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateCategory(Category category)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Category> GetList()
         {
             return _categoryDal.list();
