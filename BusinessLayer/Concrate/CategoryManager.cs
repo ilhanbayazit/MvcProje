@@ -28,17 +28,23 @@ namespace BusinessLayer.Concrate
 
         public void DeleteCategory(Category category)
         {
-            throw new NotImplementedException();
+            _categoryDal.delete(category);
         }
 
         public void UpdateCategory(Category category)
         {
-            throw new NotImplementedException();
+            _categoryDal.update(category);
+
         }
 
         public List<Category> GetList()
         {
             return _categoryDal.list();
+        }
+
+        public Category GetByID(int id)
+        {
+            return _categoryDal.Get(x=>x.CategoryID == id);
         }
     }
 }
