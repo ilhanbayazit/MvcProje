@@ -21,7 +21,8 @@ namespace DataAccessLayer.Concrate.Repositories
 
         public void delete(T p)
         {
-            _object.Remove(p);
+            var deletedEntity = c.Entry(p);
+            deletedEntity.State = EntityState.Deleted;
             c.SaveChanges();
         }
 
@@ -32,7 +33,8 @@ namespace DataAccessLayer.Concrate.Repositories
 
         public void insert(T p)
         {
-            _object.Add(p);
+            var addedEntity = c.Entry(p);
+            addedEntity.State = EntityState.Added;
             c.SaveChanges();
         }
 
@@ -48,6 +50,8 @@ namespace DataAccessLayer.Concrate.Repositories
 
         public void update(T p)
         {
+            var updatedEntity = c.Entry(p);
+            updatedEntity.State = EntityState.Modified;
             c.SaveChanges();
         }
     }
