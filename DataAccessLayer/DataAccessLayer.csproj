@@ -79,6 +79,14 @@
     <Compile Include="Migrations\202604111923503_mig_writer_edit1.Designer.cs">
       <DependentUpon>202604111923503_mig_writer_edit1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202604122031203_mig_image_size.cs" />
+    <Compile Include="Migrations\202604122031203_mig_image_size.Designer.cs">
+      <DependentUpon>202604122031203_mig_image_size.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202604122102537_mig_Writer_Status.cs" />
+    <Compile Include="Migrations\202604122102537_mig_Writer_Status.Designer.cs">
+      <DependentUpon>202604122102537_mig_Writer_Status.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -101,6 +109,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202604111923503_mig_writer_edit1.resx">
       <DependentUpon>202604111923503_mig_writer_edit1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202604122031203_mig_image_size.resx">
+      <DependentUpon>202604122031203_mig_image_size.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202604122102537_mig_Writer_Status.resx">
+      <DependentUpon>202604122102537_mig_Writer_Status.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

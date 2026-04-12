@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntityLayer.Concrate;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Abstract
 {
-    internal interface IHeaderDal:IRepository<Header>
+    public interface IHeaderDal : IRepository<Heading>
     {
     }
 }
