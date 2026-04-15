@@ -25,7 +25,8 @@ namespace BusinessLayer.Concrate
 
         public void DeleteHeading(Heading heading)
         {
-            _headerDal.delete(heading);
+           
+            _headerDal.update(heading);
         }
 
         public Heading GetByID(int id)
