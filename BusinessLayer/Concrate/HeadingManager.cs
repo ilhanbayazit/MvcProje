@@ -39,6 +39,11 @@ namespace BusinessLayer.Concrate
             return _headerDal.list();
         }
 
+        public void RecoverHeading(Heading heading)
+        {
+            _headerDal.update(heading);
+        }
+
         public void UpdateHeading(Heading heading)
         {
             _headerDal.update(heading);
