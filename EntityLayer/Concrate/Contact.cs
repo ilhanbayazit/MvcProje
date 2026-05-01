@@ -12,7 +12,7 @@ namespace EntityLayer.Concrate
         [Key]
         public int ContantID { get; set; }
         [StringLength(50)]
-        public string UserSurname { get; set; }
+        public string UserName { get; set; }
         [StringLength(50)]
 
         public string UserMail { get; set; }

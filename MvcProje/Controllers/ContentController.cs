@@ -10,7 +10,7 @@ namespace MvcProje.Controllers
 {
     public class ContentController : Controller
     {
-        ContentManager cm = new ContentManager(new EfContactDal());
+        ContentManager cm = new ContentManager(new EfContent_Dal());
         public ActionResult Index()
         {
             return View();

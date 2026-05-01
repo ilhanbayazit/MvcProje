@@ -95,6 +95,10 @@
     <Compile Include="Migrations\202604150902449_mig_heading_status.Designer.cs">
       <DependentUpon>202604150902449_mig_heading_status.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202605011801144_mig4.cs" />
+    <Compile Include="Migrations\202605011801144_mig4.Designer.cs">
+      <DependentUpon>202605011801144_mig4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -129,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202604150902449_mig_heading_status.resx">
       <DependentUpon>202604150902449_mig_heading_status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202605011801144_mig4.resx">
+      <DependentUpon>202605011801144_mig4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
