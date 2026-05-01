@@ -64,5 +64,6 @@ namespace MvcProje.Controllers
             cm.UpdateCategory(p);
             return RedirectToAction("Index");
         }
+       
     }
 }
