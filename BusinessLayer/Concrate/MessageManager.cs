@@ -20,7 +20,7 @@ namespace BusinessLayer.Concrate
 
         public void AddMessage(Message message)
         {
-            throw new NotImplementedException();
+            _messageDal.insert(message);
         }
 
         public void DeleteMessage(Message message)
@@ -33,9 +33,14 @@ namespace BusinessLayer.Concrate
             throw new NotImplementedException();
         }
 
-        public List<Message> GetList()
+        public List<Message> GetListInbox()
         {
             return _messageDal.list(x => x.ReciverMail == "Admin");
+        }
+
+        public List<Message> GetListSendbox()
+        {
+            return _messageDal.list(x => x.SenderMail == "Admin");
         }
 
         public void UpdateMessage(Message message)
