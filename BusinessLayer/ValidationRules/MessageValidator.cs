@@ -19,22 +19,22 @@ namespace BusinessLayer.ValidationRules
             RuleFor(x => x.MessageContent).NotEmpty().WithMessage("Mesaj boş geçilemez");
             RuleFor(x => x.Subject).MinimumLength(3).WithMessage("Mesaj konusu en az 3 karakterden oluşmalı");
             RuleFor(x => x.Subject).MaximumLength(100).WithMessage("Mesaj konusunu 100 karakterden fazla girmeyin");
-            RuleFor(x => x.ReciverMail)
-                .NotEmpty().WithMessage("Alıcı mail boş geçilemez")
-                .EmailAddress().WithMessage("Geçerli bir mail adresi giriniz")
-                .Must(MailAdresiKayitliMi).WithMessage("Bu mail adresi sistemde kayıtlı değil");
+            //RuleFor(x => x.ReciverMail)
+            //    .NotEmpty().WithMessage("Alıcı mail boş geçilemez")
+            //    .EmailAddress().WithMessage("Geçerli bir mail adresi giriniz")
+            //    .Must(MailAdresiKayitliMi).WithMessage("Bu mail adresi sistemde kayıtlı değil");
 
         }
-        private bool MailAdresiKayitliMi(string mail)
-        {
-            if (string.IsNullOrWhiteSpace(mail))
-                return false;
+        //private bool MailAdresiKayitliMi(string mail)
+        //{
+        //    if (string.IsNullOrWhiteSpace(mail))
+        //        return false;
 
-            using (Context c = new Context())
-            {
-                return c.Contacts.Any(x => x.UserMail == mail);
-            }
-        }
+        //    using (Context c = new Context())
+        //    {
+        //        return c.Contacts.Any(x => x.UserMail == mail);
+        //    }
+        //}
 
     }
 }

@@ -105,6 +105,10 @@
     <Compile Include="Migrations\202605020933372_mig_add_Message.Designer.cs">
       <DependentUpon>202605020933372_mig_add_Message.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202605031919291_mig_contact_date_ekleme.cs" />
+    <Compile Include="Migrations\202605031919291_mig_contact_date_ekleme.Designer.cs">
+      <DependentUpon>202605031919291_mig_contact_date_ekleme.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -145,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202605020933372_mig_add_Message.resx">
       <DependentUpon>202605020933372_mig_add_Message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202605031919291_mig_contact_date_ekleme.resx">
+      <DependentUpon>202605031919291_mig_contact_date_ekleme.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
