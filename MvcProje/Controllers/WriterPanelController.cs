@@ -80,6 +80,6 @@ namespace MvcProje.Controllers
             hm.UpdateHeading(p);
             return RedirectToAction("MyHeading");
         }
-
+        
     }
 }

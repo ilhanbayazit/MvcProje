@@ -71,7 +71,7 @@
                                 <tbody>
                                     @foreach (var item in Model)
                                     {
-                                        var gecenSure = DateTime.Now - item.MessageDate;
+                                       
 
                                         <tr>
                                             <td>
@@ -98,7 +98,7 @@
                                             <td class="mailbox-attachment"></td>
 
                                             <td class="mailbox-date">
-                                                @((int)gecenSure.TotalMinutes) mins ago
+                                                @item.MessageDate.ToString("dd MMMM yyyy")
                                             </td>
                                         </tr>
                                     }

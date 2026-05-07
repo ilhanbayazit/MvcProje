@@ -43,6 +43,11 @@ namespace BusinessLayer.Concrate
             return _contentdal.list(x => x.HeadingID == id);
         }
 
+        public List<Content> GetListByWriter()
+        {
+            return _contentdal.list(x => x.WriterID == 1);
+        }
+
         public void UpdateContent(Content content)
         {
             throw new NotImplementedException();

@@ -36,12 +36,12 @@ namespace BusinessLayer.Concrate
 
         public List<Message> GetListInbox()
         {
-            return _messageDal.list(x => x.ReciverMail == "Admin");
+            return _messageDal.list(x => x.ReciverMail == "aliyildiz@gmail.com");
         }
 
         public List<Message> GetListSendbox()
         {
-            return _messageDal.list(x => x.SenderMail == "Admin");
+            return _messageDal.list(x => x.SenderMail == "aliyildiz@gmail.com");
         }
 
         public void UpdateMessage(Message message)

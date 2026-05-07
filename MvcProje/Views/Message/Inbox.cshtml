@@ -71,7 +71,7 @@
                                 <tbody>
                                     @foreach (var item in Model)
                                     {
-                                        var gecenSure = DateTime.Now - item.MessageDate;
+                                       
                                         <tr>
                                             <td>
                                                 <div class="icheck-primary">
@@ -85,7 +85,7 @@
                                                 <b style="margin-right:5px;">@item.Subject -</b> @item.MessageContent.Substring(0, 30)...
                                             </td>
                                             <td class="mailbox-attachment"></td>
-                                            <td class="mailbox-date">@((int)gecenSure.TotalMinutes) dakika önce</td>
+                                            <td class="mailbox-date"> @item.MessageDate.ToString("dd MMMM yyyy")</td>
                                         </tr>
                                     }
                                 </tbody>
