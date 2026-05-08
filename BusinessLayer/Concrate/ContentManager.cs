@@ -35,7 +35,7 @@ namespace BusinessLayer.Concrate
 
         public List<Content> GetList()
         {
-            throw new NotImplementedException();
+            return _contentdal.list();
         }
 
         public List<Content> GetListByHeadingID(int id)
