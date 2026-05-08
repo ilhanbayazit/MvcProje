@@ -87,6 +87,11 @@ namespace MvcProje.Controllers
             hm.UpdateHeading(p);
             return RedirectToAction("MyHeading");
         }
+        public ActionResult AllHeadings()
+        {
+            var allheadings = hm.GetList();
+            return View(allheadings);
+        }
 
     }
 }

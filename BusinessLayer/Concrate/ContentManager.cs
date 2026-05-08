@@ -20,7 +20,7 @@ namespace BusinessLayer.Concrate
 
         public void AddContent(Content content)
         {
-            throw new NotImplementedException();
+            _contentdal.insert(content);
         }
 
         public void DeleteContent(Content content)
