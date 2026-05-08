@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrate;
+using DataAccessLayer.Concrate;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrate;
 using System;
@@ -11,18 +12,22 @@ namespace MvcProje.Controllers
 {
     public class WriterPanelController : Controller
     {
+
         // GET: WriterPanel
         HeadingManager hm = new HeadingManager(new EfHeadingDal());
         CategoryManager cm = new CategoryManager(new EfCategoryDal());
+        Context c = new Context();
         public ActionResult WriterProfile()
         {
             return View();
         }
-        
-        public ActionResult MyHeading()
+
+        public ActionResult MyHeading(string p)
         {
 
-            var values = hm.GetListByWriter();
+            p = (string)Session["WriterMail"];
+            var writeridinfo = c.Writers.Where(x => x.WriterMail == p).Select(y => y.WriterID).FirstOrDefault();
+            var values = hm.GetListByWriter(writeridinfo);
             return View(values);
         }
         public ActionResult DeleteHeading(int id)
@@ -54,9 +59,11 @@ namespace MvcProje.Controllers
         [HttpPost]
         public ActionResult NewHeading(Heading p)
         {
+            string writermailinfo = (string)Session["WriterMail"];
+            var writeridinfo = c.Writers.Where(x => x.WriterMail == writermailinfo).Select(y => y.WriterID).FirstOrDefault();
             p.HeadingDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             p.HeadingStatus = true;
-            p.WriterID = 1;
+            p.WriterID = writeridinfo;           
             hm.AddHeading(p);
             return RedirectToAction("MyHeading");
         }
@@ -80,6 +87,6 @@ namespace MvcProje.Controllers
             hm.UpdateHeading(p);
             return RedirectToAction("MyHeading");
         }
-        
+
     }
 }

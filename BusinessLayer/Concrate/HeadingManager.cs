@@ -39,10 +39,11 @@ namespace BusinessLayer.Concrate
             return _headerDal.list();
         }
 
-        public List<Heading> GetListByWriter()
+        public List<Heading> GetListByWriter(int id)
         {
-            return _headerDal.list(x => x.WriterID == 1);
+            return _headerDal.list(x => x.WriterID == id);
         }
+
 
         public void RecoverHeading(Heading heading)
         {

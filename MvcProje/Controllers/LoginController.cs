@@ -11,9 +11,10 @@ using System.Web.Security;
 
 namespace MvcProje.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
-        // GET: Login
+        
         AdminManager adm = new AdminManager(new EfAdminDal());
         [HttpGet]
         public ActionResult Index()

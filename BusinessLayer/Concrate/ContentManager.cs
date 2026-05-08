@@ -43,9 +43,9 @@ namespace BusinessLayer.Concrate
             return _contentdal.list(x => x.HeadingID == id);
         }
 
-        public List<Content> GetListByWriter()
+        public List<Content> GetListByWriter(int id)
         {
-            return _contentdal.list(x => x.WriterID == 1);
+            return _contentdal.list(x => x.WriterID == id);
         }
 
         public void UpdateContent(Content content)
