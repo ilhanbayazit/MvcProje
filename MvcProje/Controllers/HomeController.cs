@@ -8,6 +8,7 @@ namespace MvcProje.Controllers
 {
     public class HomeController : Controller
     {
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View();
@@ -34,6 +35,11 @@ namespace MvcProje.Controllers
         public ActionResult Modeller()
         {
             ViewBag.Message = "ilk oyun = angry insects";
+            return View();
+        }
+        [AllowAnonymous]
+        public ActionResult HomePage()
+        {
             return View();
         }
     }
