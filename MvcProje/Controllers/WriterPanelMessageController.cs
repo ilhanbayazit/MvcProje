@@ -18,19 +18,23 @@ namespace MvcProje.Controllers
         MessageValidator mesagevalidator = new MessageValidator();
         public ActionResult Inbox()
         {
-            var messagevalues = mm.GetListInbox();
+            string writermailinfo = (string)Session["WriterMail"];
+            var messagevalues = mm.GetListInbox(writermailinfo);
             return View(messagevalues);
         }
         public PartialViewResult WriterLeftBarPartial()
         {
+
+            string writermailinfo = (string)Session["WriterMail"];
             ViewBag.ContactCount = cm.GetList().Count;
-            ViewBag.InboxCount = mm.GetListInbox().Count;
-            ViewBag.SendboxCount = mm.GetListSendbox().Count;
+            ViewBag.InboxCount = mm.GetListInbox(writermailinfo).Count;
+            ViewBag.SendboxCount = mm.GetListSendbox(writermailinfo).Count;
             return PartialView();
         }
         public ActionResult Sendbox()
         {
-            var messagevalue = mm.GetListSendbox();
+            string writermailinfo = (string)Session["WriterMail"];
+            var messagevalue = mm.GetListSendbox(writermailinfo);
             return View(messagevalue);
         }
         public ActionResult GetInboxMessageDetails(int id)
@@ -51,10 +55,11 @@ namespace MvcProje.Controllers
         [HttpPost]
         public ActionResult NewMessage(Message p)
         {
+            string sender = (string)Session["WriterMail"];
             ValidationResult result = mesagevalidator.Validate(p);
             if (result.IsValid)
             {
-                p.SenderMail = "aliyildiz@gmail.com";
+                p.SenderMail = sender;
                 p.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
                 mm.AddMessage(p);
                 return RedirectToAction("Sendbox");

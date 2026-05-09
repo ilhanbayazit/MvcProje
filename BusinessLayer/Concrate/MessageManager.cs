@@ -34,14 +34,14 @@ namespace BusinessLayer.Concrate
             return _messageDal.Get(x => x.MessageID == id);
         }
 
-        public List<Message> GetListInbox()
+        public List<Message> GetListInbox(string p)
         {
-            return _messageDal.list(x => x.ReciverMail == "aliyildiz@gmail.com");
+            return _messageDal.list(x => x.ReciverMail == p);
         }
 
-        public List<Message> GetListSendbox()
+        public List<Message> GetListSendbox(string p)
         {
-            return _messageDal.list(x => x.SenderMail == "aliyildiz@gmail.com");
+            return _messageDal.list(x => x.SenderMail == p);
         }
 
         public void UpdateMessage(Message message)

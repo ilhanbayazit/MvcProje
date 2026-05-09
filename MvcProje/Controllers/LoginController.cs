@@ -36,7 +36,7 @@ namespace MvcProje.Controllers
             {
                 return RedirectToAction("Index");
             }
-            return View();
+
         }
         [HttpGet]
         public ActionResult WriterLogin()

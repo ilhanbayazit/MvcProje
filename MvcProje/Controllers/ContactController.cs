@@ -30,9 +30,10 @@ namespace MvcProje.Controllers
         //}
         public PartialViewResult LeftBarPartial()
         {
+            string writermailinfo = (string)Session["WriterMail"];
             ViewBag.ContactCount = cm.GetList().Count;
-            ViewBag.InboxCount = mm.GetListInbox().Count;
-            ViewBag.SendboxCount = mm.GetListSendbox().Count;
+            ViewBag.InboxCount = mm.GetListInbox(writermailinfo).Count;
+            ViewBag.SendboxCount = mm.GetListSendbox(writermailinfo).Count;
 
             return PartialView();
         }
