@@ -28,14 +28,20 @@ namespace BusinessLayer.Concrate
             throw new NotImplementedException();
         }
 
+
         public Content GetByID(int id)
         {
             throw new NotImplementedException();
         }
 
+        public List<Content> GetList(string p)
+        {
+            return _contentdal.list(x=>x.ContentValue.Contains(p));
+        }
+
         public List<Content> GetList()
         {
-            return _contentdal.list();
+           return _contentdal.list();
         }
 
         public List<Content> GetListByHeadingID(int id)

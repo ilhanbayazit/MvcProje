@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrate;
+using DataAccessLayer.Concrate;
 using DataAccessLayer.EntityFramework;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ namespace MvcProje.Controllers
     public class ContentController : Controller
     {
         ContentManager cm = new ContentManager(new EfContent_Dal());
+       
         public ActionResult Index()
         {
             return View();
@@ -19,6 +21,15 @@ namespace MvcProje.Controllers
         {
             var contentvalues = cm.GetListByHeadingID(id);
             return View(contentvalues);
+        }
+        Context c = new Context();
+        public ActionResult GetAllContent(string p)
+        {
+            var values = string.IsNullOrWhiteSpace(p)
+                ? cm.GetList()
+                : cm.GetList(p);
+
+            return View(values.ToList());
         }
     }
 }
