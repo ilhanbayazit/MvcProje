@@ -15,5 +15,7 @@ namespace EntityLayer.Concrate
         public string ImageFileName { get; set; }
         [StringLength(250)]
         public string ImageFilePath { get; set; }
+        [StringLength(100)]
+        public string ImageDescription { get; set; }
     }
 }

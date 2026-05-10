@@ -1,4 +1,7 @@
-﻿@{
+﻿@using EntityLayer.Concrate
+@model List<ImageFile>
+@*@Url.Content("~/AdminLTE-3.0.4/web/images/g1.jpg")*@
+@{
     Layout = null;
 }
 
@@ -63,7 +66,7 @@
 
                 <ul class="text-center nav-honey">
                     <li>
-                        <a href="index.html" class="active">Ana Sayfa</a>
+                        <a href="#home" class="scroll">Ana Sayfa</a>
                     </li>
                     <li>
                         <a class="scroll" href="#about">Geliştirme Araçları</a>
@@ -78,7 +81,7 @@
                         <a class="scroll" href="#contact">İletişim</a>
                     </li>
                     <li>
-                        <a class="scroll" href="#contact">Sözlük</a>
+                        <a href="/Default/Headings/1">Sözlük</a>
                     </li>
                     <li class="login">
                         <button type="button" class="btn login-btn text-uppercase" data-toggle="modal" data-target="#exampleModalCenter">
@@ -118,7 +121,7 @@
     <section class="banner-bottom-wthree py-lg-5 py-md-5 py-4" id="about">
         <div class="container">
             <div class="inner-sec-w3ls py-lg-5 py-4">
-                <div class="info-about text-center">                    
+                <div class="info-about text-center">
                     <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3">Kullandığım Geliştirme Bileşenleri</h3>
 
                     <div class="row mt-lg-5 mt-3">
@@ -206,8 +209,10 @@
                                             <div class="card">
                                                 <div class="card-body">
                                                     <i class="fas fa-list-ul mb-4"></i>
-                                                    <h5 class="card-title text-uppercase">SQL Veri Tabanı</h5>
-                                                    <p class="card-text">Projemde veri tabanı olarak MSSQL kullanıdm, sunucuya taşırken windows hosting desteği olan bir sunucu üzerinde çalıştım.</p>
+                                                    <h5 class="card-title text-uppercase">MVC MİMARİSİ</h5>
+                                                    <p class="card-text">
+                                                        Projemde katmanlı mimari kullanarak kodları daha düzenli, okunabilir ve geliştirilebilir bir yapıda hazırladım.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -216,8 +221,10 @@
                                             <div class="card">
                                                 <div class="card-body">
                                                     <i class="far fa-lightbulb mb-4"></i>
-                                                    <h5 class="card-title text-uppercase">Creative Ideas</h5>
-                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur elit,Adipisicing elit tempor.</p>
+                                                    <h5 class="card-title text-uppercase">VERİ TABANI</h5>
+                                                    <p class="card-text">
+                                                        MSSQL veri tabanı ile kullanıcı, içerik ve mesaj verilerini güvenli şekilde saklayıp sistemde kullandım.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -226,8 +233,10 @@
                                             <div class="card">
                                                 <div class="card-body">
                                                     <i class="far fa-clone mb-4"></i>
-                                                    <h5 class="card-title text-uppercase">SEO & Marketing</h5>
-                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur elit,Adipisicing elit tempor.</p>
+                                                    <h5 class="card-title text-uppercase">ADMİN PANELİ</h5>
+                                                    <p class="card-text">
+                                                        Admin panelinde içerik yönetimi, listeleme, ekleme, silme ve güncelleme işlemlerini aktif hale getirdim.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -244,8 +253,10 @@
                                             <div class="card">
                                                 <div class="card-body">
                                                     <i class="far fa-heart mb-4"></i>
-                                                    <h5 class="card-title">User Friendly</h5>
-                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur elit,Adipisicing elit tempor.</p>
+                                                    <h5 class="card-title text-uppercase">TASARIM ARAÇLARI</h5>
+                                                    <p class="card-text">
+                                                        Frontend kısmında Html5, CSS, Bootstrap, Javascript ve Jquery kullanarak sayfa tasarımını oluşturdum.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -254,8 +265,10 @@
                                             <div class="card">
                                                 <div class="card-body">
                                                     <i class="fas fa-magic mb-4"></i>
-                                                    <h5 class="card-title">Web Development</h5>
-                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur elit,Adipisicing elit tempor.</p>
+                                                    <h5 class="card-title text-uppercase">KENDİM HAKKINDA</h5>
+                                                    <p class="card-text">
+                                                        Yazılım geliştirmeye ilgi duyan, C#, Python, Java ve web teknolojileri üzerine çalışan bir öğrenciyim. Kendimi geliştiriyorum.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -264,8 +277,10 @@
                                             <div class="card">
                                                 <div class="card-body">
                                                     <i class="fas fa-sliders-h mb-4"></i>
-                                                    <h5 class="card-title">Portfolio Options</h5>
-                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur elit,Adipisicing elit tempor.</p>
+                                                    <h5 class="card-title text-uppercase">PROJE GELİŞİMİ</h5>
+                                                    <p class="card-text">
+                                                        Bu proje sayesinde MVC yapısını, veri tabanı bağlantılarını ve web arayüz yönetimini uygulamalı öğrendim.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -293,121 +308,26 @@
 
     <section class="gallery py-md-5 py-3" id="projects">
         <div class="gallery-inner container py-md-5 pb-3">
-            <h4 class="sub-tittle-w3 text-uppercase text-center">View all</h4>
-            <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center">My Projects</h3>
+            <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center">Proje Görselleri</h3>
 
             <div class="row">
 
-                <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
+                @foreach (var item in Model)
+                {
 
-                    <div class="section_1_gallery_grid">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="@Url.Content("~/AdminLTE-3.0.4/web/images/g1.jpg")">
-                            <div class="section_1_gallery_grid1">
-                                <img src="@Url.Content("~/AdminLTE-3.0.4/web/images/g1.jpg")" alt=" " class="img-fluid" />
-                                <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
+                    <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
+                        <div class="section_1_gallery_grid">
+                            <a title="@item.ImageDescription" href="@item.ImageFilePath">
+                                <div class="section_1_gallery_grid1">
+                                    <img src="@item.ImageFilePath" alt=" " class="img-fluid" />
+                                    <div class="proj_gallery_grid1_pos">
+                                        <h3>@item.ImageFileName</h3>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
-
-                    <div class="section_1_gallery_grid" data-aos="zoom-in">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="@Url.Content("~/AdminLTE-3.0.4/web/images/g2.jpg")">
-                            <div class="section_1_gallery_grid1">
-                                <img src="@Url.Content("~/AdminLTE-3.0.4/web/images/g2.jpg")" alt=" " class="img-fluid" />
-                                <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="section_1_gallery_grid" data-aos="zoom-in">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="@Url.Content("~/AdminLTE-3.0.4/web/images/g3.jpg")">
-                            <div class="section_1_gallery_grid1">
-                                <img src="@Url.Content("~/AdminLTE-3.0.4/web/images/g3.jpg")" alt=" " class="img-fluid" />
-                                <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-
-                <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
-
-                    <div class="section_1_gallery_grid">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="@Url.Content("~/AdminLTE-3.0.4/web/images/g4.jpg")">
-                            <div class="section_1_gallery_grid1">
-                                <img src="@Url.Content("~/AdminLTE-3.0.4/web/images/g4.jpg")" alt=" " class="img-fluid" />
-                                <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="section_1_gallery_grid" data-aos="zoom-in">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="@Url.Content("~/AdminLTE-3.0.4/web/images/g5.jpg")">
-                            <div class="section_1_gallery_grid1">
-                                <img src="@Url.Content("~/AdminLTE-3.0.4/web/images/g5.jpg")" alt=" " class="img-fluid" />
-                                <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="section_1_gallery_grid" data-aos="zoom-in">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="@Url.Content("~/AdminLTE-3.0.4/web/images/g6.jpg")">
-                            <div class="section_1_gallery_grid1">
-                                <img src="@Url.Content("~/AdminLTE-3.0.4/web/images/g6.jpg")" alt=" " class="img-fluid" />
-                                <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-
-                <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
-
-                    <div class="section_1_gallery_grid">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="@Url.Content("~/AdminLTE-3.0.4/web/images/g7.jpg")">
-                            <div class="section_1_gallery_grid1">
-                                <img src="@Url.Content("~/AdminLTE-3.0.4/web/images/g7.jpg")" alt=" " class="img-fluid" />
-                                <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="section_1_gallery_grid" data-aos="zoom-in">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="@Url.Content("~/AdminLTE-3.0.4/web/images/g8.jpg")">
-                            <div class="section_1_gallery_grid1">
-                                <img src="@Url.Content("~/AdminLTE-3.0.4/web/images/g8.jpg")" alt=" " class="img-fluid" />
-                                <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="section_1_gallery_grid" data-aos="zoom-in">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="@Url.Content("~/AdminLTE-3.0.4/web/images/g9.jpg")">
-                            <div class="section_1_gallery_grid1">
-                                <img src="@Url.Content("~/AdminLTE-3.0.4/web/images/g9.jpg")" alt=" " class="img-fluid" />
-                                <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
+                }
 
             </div>
         </div>
@@ -419,26 +339,26 @@
 
                 <div class="col-sm-3 col-6 stats_info counter_grid">
                     <i class="far fa-lightbulb"></i>
-                    <p class="counter">645</p>
-                    <h4>Projects Done</h4>
+                    <p class="counter">9</p>
+                    <h4>Entity Tablosu</h4>
                 </div>
 
                 <div class="col-sm-3 col-6 stats_info counter_grid1">
                     <i class="far fa-heart"></i>
-                    <p class="counter">563</p>
-                    <h4>Satisfied Clients</h4>
+                    <p class="counter">15</p>
+                    <h4>View Sayfası</h4>
                 </div>
 
                 <div class="col-sm-3 col-6 stats_info counter_grid">
                     <i class="fas fa-magic"></i>
-                    <p class="counter">1145</p>
-                    <h4>Awards</h4>
+                    <p class="counter">18</p>
+                    <h4>Controller</h4>
                 </div>
 
                 <div class="col-sm-3 col-6 stats_info counter_grid2">
                     <i class="far fa-smile"></i>
-                    <p class="counter">1045</p>
-                    <h4>Happy Clients</h4>
+                    <p class="counter">95</p>
+                    <h4>MVC Uyumlu</h4>
                 </div>
 
             </div>
@@ -447,8 +367,8 @@
 
     <div class="testimonials py-lg-5 py-4" id="clients">
         <div class="testimonials-inner container py-lg-4 py-3">
-            <h4 class="sub-tittle-w3 text-uppercase text-center">Testimonials</h4>
-            <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center">What They Says</h3>
+            <h4 class="sub-tittle-w3 text-uppercase text-center">Kısa Notlar</h4>
+            <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center">Projeye Dair</h3>
 
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner" role="listbox">
@@ -457,10 +377,10 @@
                         <div class="testimonials_grid center">
                             <div class="testimonials_grid-inn text-uppercase">
                                 <i class="fas fa-quote-left"></i>
-                                <p>Lorem ipsum dolor sit amet,Maecenas interdum magna quam egestas sem, ac scelerisque nisl nibh vel lacus. Proin eget gravida odio. Donec ullamcorper est eu accumsan cursus.</p>
+                                <p> Bu MVC projesinde katmanlı mimari, veri tabanı işlemleri ve kullanıcı arayüzü birlikte kullanılarak dinamik bir web sistemi geliştirildi.</p>
                             </div>
-                            <h3>Gretchen</h3>
-                            <label>United States</label>
+                            <h3>MVC Proje</h3>
+                            <label>Katmanlı Mimari</label>
                         </div>
                     </div>
 
@@ -468,10 +388,10 @@
                         <div class="testimonials_grid text-center">
                             <div class="testimonials_grid-inn text-uppercase">
                                 <i class="fas fa-quote-left"></i>
-                                <p>Lorem ipsum dolor sit amet,Maecenas interdum magna quam egestas sem, ac scelerisque nisl nibh vel lacus. Proin eget gravida odio. Donec ullamcorper est eu accumsan cursus.</p>
+                                <p> Projede MSSQL veri tabanı ile ekleme, silme, güncelleme ve listeleme işlemleri yapılarak yönetilebilir bir sistem oluşturuldu.</p>
                             </div>
-                            <h3>Anne Marc</h3>
-                            <label>United States</label>
+                            <h3>Veri Tabanı</h3>
+                            <label>MSSQL Kullanımı</label>
                         </div>
                     </div>
 
@@ -479,10 +399,10 @@
                         <div class="testimonials_grid">
                             <div class="testimonials_grid-inn text-uppercase">
                                 <i class="fas fa-quote-left"></i>
-                                <p>Maecenas interdum, metus vitae tincidunt porttitor, magna quam egestas sem, ac scelerisque nisl nibh vel lacus. Proin eget gravida odio. Donec ullamcorper est eu accumsan cursus.</p>
+                                <p> Admin paneli ve kullanıcı arayüzü sayesinde içerikler daha düzenli yönetildi ve proje görsel olarak daha profesyonel hale getirildi.</p>
                             </div>
-                            <h3>Harry Baker</h3>
-                            <label>United States</label>
+                            <h3>Admin Paneli</h3>
+                            <label>İçerik Yönetimi</label>
                         </div>
                     </div>
 
@@ -505,8 +425,7 @@
         <div class="container">
             <div class="inner-sec-w3ls py-lg-5 py-3">
 
-                <h4 class="sub-tittle-w3 text-uppercase text-center">Find Me</h4>
-                <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center text-white">Contact Me Now</h3>
+                <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center text-white">İletişim</h3>
 
                 <div class="contact_grid_right">
                     <form action="#" method="post">
@@ -514,26 +433,26 @@
 
                             <div class="col-md-6 con-left" data-aos="fade-up">
                                 <div class="form-group">
-                                    <input class="form-control" type="text" name="Name" placeholder="" required="">
+                                    <input class="form-control" type="text" name="Name" placeholder="İsim" required="">
                                 </div>
 
                                 <div class="form-group">
-                                    <input class="form-control" type="email" name="Email" placeholder="" required="">
+                                    <input class="form-control" type="email" name="Email" placeholder="Mail" required="">
                                 </div>
 
                                 <div class="form-group">
-                                    <input class="form-control" type="text" name="Subject" placeholder="" required="">
+                                    <input class="form-control" type="text" name="Subject" placeholder="Konu" required="">
                                 </div>
                             </div>
 
                             <div class="col-md-6 con-right" data-aos="fade-up">
                                 <div class="form-group">
-                                    <textarea id="textarea" placeholder="" required=""></textarea>
+                                    <textarea id="textarea" placeholder="Mesaj" required=""></textarea>
                                 </div>
                             </div>
 
                             <div class="sub-honey mx-auto mt-3">
-                                <input class="form-control" type="submit" value="Submit">
+                                <input class="form-control" type="submit" value="Gönder">
                             </div>
 
                         </div>
@@ -548,8 +467,8 @@
                                 <i class="far fa-map"></i>
                             </div>
                             <div class="address-right text-center">
-                                <h6 class="my-3">Address</h6>
-                                <p>California, USA</p>
+                                <h6 class="my-3">Adres</h6>
+                                <p>İstanbul, Türkiye</p>
                             </div>
                         </div>
                     </div>
@@ -560,10 +479,10 @@
                                 <i class="far fa-envelope"></i>
                             </div>
                             <div class="address-right text-center">
-                                <h6 class="my-3">Email</h6>
+                                <h6 class="my-3">Mail</h6>
                                 <p>
-                                    Email :
-                                    <a href="mailto:example@email.com">mail@example.com</a>
+                                    Mail :
+                                    <a href="mailto:example@email.com">ilhanbayazit404@gmail.com</a>
                                 </p>
                             </div>
                         </div>
@@ -575,7 +494,7 @@
                                 <i class="fas fa-mobile-alt"></i>
                             </div>
                             <div class="address-right text-center">
-                                <h6 class="my-3">Phone</h6>
+                                <h6 class="my-3">Telefon</h6>
                                 <p>+1 234 567 8901</p>
                             </div>
                         </div>
@@ -595,19 +514,19 @@
                 <div class="col-lg-2 col-md-4">
                     <ul class="list-footer" data-aos="fade-up">
                         <li>
-                            <a href="#home" class="nav-link scroll">Home</a>
+                            <a href="#home" class="nav-link scroll">Ana Sayfa</a>
                         </li>
                         <li class="my-2">
-                            <a href="#about" class="nav-link scroll">About</a>
+                            <a href="#about" class="nav-link scroll">Geliştirme Araçları</a>
                         </li>
                         <li class="my-2">
-                            <a href="#services" class="nav-link scroll">Services</a>
+                            <a href="#services" class="nav-link scroll">Hakkında</a>
                         </li>
                         <li class="mb-2">
-                            <a href="#projects" class="nav-link scroll">Projects</a>
+                            <a href="#projects" class="nav-link scroll">Görseller</a>
                         </li>
                         <li>
-                            <a href="#contact" class="nav-link scroll">Contact Us</a>
+                            <a href="#contact" class="nav-link scroll">İletişim</a>
                         </li>
                     </ul>
                 </div>
@@ -615,14 +534,11 @@
                 <div class="col-lg-2 col-md-4 col-sm-6 mt-sm-5">
                     <ul class="list-footer" data-aos="fade-up">
                         <li>
-                            <a href="#register" data-toggle="modal" data-target="#exampleModalCenter" class="nav-link scroll">Login</a>
+                            <a href="#register" data-toggle="modal" data-target="#exampleModalCenter" class="nav-link scroll">Giriş Yap</a>
                         </li>
                         <li class="my-2">
-                            <a href="#" data-toggle="modal" data-target="#exampleModalCenter2" class="nav-link">Register</a>
-                        </li>
-                        <li class="my-2">
-                            <a href="#" class="nav-link">License</a>
-                        </li>
+                            <a href="#" data-toggle="modal" data-target="#exampleModalCenter2" class="nav-link">Kayıt Ol</a>
+                        </li>                      
                     </ul>
                 </div>
 
@@ -631,7 +547,7 @@
                 <div class="col-lg-4 footer-end-grid mt-md-0 mt-sm-5" data-aos="fade-up">
                     <h2>
                         <a href="index.html">
-                            <i class="fas fa-crosshairs"></i> Recognize
+                            <i class="fas fa-crosshairs"></i> MVC Proje
                         </a>
                     </h2>
                 </div>
@@ -644,8 +560,8 @@
 
                 <div class="copy-right-w3ls">
                     <p>
-                        © 2018 Recognize. All rights reserved | Design by
-                        <a href="http://w3layouts.com/">W3layouts</a>
+                        © 2026 MVC Proje. | Design by
+                        <a href="#">İlhan Bayazıt</a>
                     </p>
                 </div>
 

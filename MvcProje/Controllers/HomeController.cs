@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLayer.Concrate;
+using DataAccessLayer.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +10,8 @@ namespace MvcProje.Controllers
 {
     public class HomeController : Controller
     {
+
+        ImageFileManeger im = new ImageFileManeger(new EfImageFileDal());
         [AllowAnonymous]
         public ActionResult Index()
         {
@@ -40,7 +44,8 @@ namespace MvcProje.Controllers
         [AllowAnonymous]
         public ActionResult HomePage()
         {
-            return View();
+            var values = im.GetList();
+            return View(values);
         }
     }
 }

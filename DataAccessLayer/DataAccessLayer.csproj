@@ -121,6 +121,10 @@
     <Compile Include="Migrations\202605051251426_mig_admin_entity.Designer.cs">
       <DependentUpon>202605051251426_mig_admin_entity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202605101136098_mig_image_description.cs" />
+    <Compile Include="Migrations\202605101136098_mig_image_description.Designer.cs">
+      <DependentUpon>202605101136098_mig_image_description.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -170,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202605051251426_mig_admin_entity.resx">
       <DependentUpon>202605051251426_mig_admin_entity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202605101136098_mig_image_description.resx">
+      <DependentUpon>202605101136098_mig_image_description.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

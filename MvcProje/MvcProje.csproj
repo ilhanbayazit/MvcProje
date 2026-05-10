@@ -2026,8 +2026,11 @@
     <Content Include="AdminLTE-3.0.4\plugins\toastr\toastr.css" />
     <Content Include="AdminLTE-3.0.4\plugins\toastr\toastr.min.css" />
     <Content Include="AdminLTE-3.0.4\plugins\toastr\toastr.min.js" />
-    <Content Include="AdminLTE-3.0.4\Resimler\voli4.jpg" />
-    <Content Include="AdminLTE-3.0.4\Resimler\VoliBear2.jpg" />
+    <Content Include="AdminLTE-3.0.4\Resimler\dağ.jpg" />
+    <Content Include="AdminLTE-3.0.4\Resimler\ejder.jpg" />
+    <Content Include="AdminLTE-3.0.4\Resimler\orman.jpg" />
+    <Content Include="AdminLTE-3.0.4\Resimler\orman2.jpg" />
+    <Content Include="AdminLTE-3.0.4\Resimler\sahil.jpg" />
     <Content Include="AdminLTE-3.0.4\starter.html" />
     <Content Include="AdminLTE-3.0.4\web\css\aos-animation.css" />
     <Content Include="AdminLTE-3.0.4\web\css\aos.css" />
